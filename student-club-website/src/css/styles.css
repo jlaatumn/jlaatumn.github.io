@@ -1,0 +1,783 @@
+body {
+    font-family: Arial, sans-serif, 'lazydog';
+    margin: 0;
+    padding: 0;
+    background-color: transparent; /* Transparent background */
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Push title left, nav right */
+    align-items: center; /* Vertically align items */
+    background-color: #768877; /* sage green background */
+    color: #ffffff; /* White text */
+    padding: 10px 15px;
+    border-bottom: 5px solid #A8574E; /* tuna color separator */
+    font-family: 'lazydog'; /* imported font */
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Navigation Bar */
+nav {
+    flex-grow: 1; /* Take up available space */
+    text-align: right; /* Align links to the right */
+    margin-top: 5px; /* Add slight spacing above */
+}
+
+nav a {
+    color: #ffffff; /* White text */
+    text-decoration: none; /* Remove underlines */
+    padding: 10px 15px; /* Add padding for clickable area */
+    font-family: 'sniglet', sans-serif; /* Keep the font you like */
+    font-size: 16px; /* Adjust font size */
+    transition: background 0.3s ease, color 0.3s ease; /* Smooth hover effects */
+}
+
+nav a:hover {
+    background: #768877; /* Sage Green hover background */
+    color: #A8574E; /* Tuna hover text color */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none; /* Remove default bullet points */
+    display: inline-flex; /* Align list items horizontally */
+    gap: 15px; /* Add spacing between links */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.nav-links li {
+    display: inline; /* Ensure list items are inline */
+}
+
+/* Container for Main Content */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden; /* Prevent overflow issues */
+}
+
+/* Footer */
+footer {
+    background: #768877; /* Tuna */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+
+/* All External Fonts */
+@font-face {
+    font-family: 'lazydog';
+    src: url('../fonts/LAZYDOG.CBC654CE48FFA209E8B8698295C5D75D.FBA574EF4DC01D71937608B6F764E2E7.TTF') format('truetype');
+}
+
+/* Load Inter font */
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter_18pt-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Load Nunito font */
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sniglet';
+    src: url('../fonts/Sniglet-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* Home Page */
+
+.logo-img {
+    width: 100px; /* Set the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures it's treated like a block element (optional) */
+    margin: 0 auto; /* Centers the logo horizontally if needed */
+}
+
+.logo {
+    background-color: white; /* Adds a white background to the logo */
+    border-radius: 50%; /* Makes the background circular if your logo is circular */
+    display: inline-block; /* Ensures the background scales with the logo */
+    padding: 1px; /* Adds space around the image inside the white area */
+    /*for spacing on logo*/
+    margin-right: 15px;
+    display: inline-block; /* logo + text alignment */
+}
+
+.top-section {
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.grid-text {
+    font-size: 1.5em;
+    font-family: "Lazydog", sans-serif;
+    font-weight: bold;
+    color: #A8574E;
+    margin-bottom: 10px;
+}
+
+.grid-image {
+    width: 150px; /* Adjust for desired size */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.grid-image:hover {
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+    .grid-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
+/* Overall Section Styling */
+.info-section {
+    background-color: #ffffff; /* White background */
+    padding: 50px 20px; /* Add spacing around the section */
+    text-align: center; /* Centers the text */
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Spacing between sections */
+    max-width: 900px; /* Limit max width */
+    margin: 0 auto; /* Center it */
+    font-family: 'Nunito', sans-serif; /* external font - inter */
+}
+
+/* Each Section */
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between image and text */
+}
+
+/* Images */
+.info-item img {
+    width: 40%; /* Image takes up 40% of the section */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Text Container */
+.info-text {
+    width: 55%; /* Text takes up the rest */
+    text-align: left; /* Align text to the left */
+}
+
+/* Headings */
+.info-text h2 {
+    color: #A8574E; /* Tuna color */
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Text Styling */
+.info-text p {
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.6; /* Better readability */
+}
+
+/* Reverse the Order for Alternating Sections */
+.reverse {
+    flex-direction: row-reverse; /* Swap image and text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .info-item {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+    }
+
+    .info-item img,
+    .info-text {
+        width: 100%; /* Full width on small screens */
+    }
+
+    .info-text {
+        text-align: center;
+    }
+}
+
+
+/* Events Page */
+/* Events Section */
+.events-section {
+    position: relative;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.events-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/cherry-blossom-bg.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: -1;
+    pointer-events: none; /* prevents interaction issues */
+}
+
+/* Events Header */
+.event-header {
+    background-color: #A0A99E;
+    padding: 20px;
+    border-radius: 60px;
+    max-width: 800px;
+    margin: 0 auto 50px auto; /* More spacing below the header */
+    font-family: Lazydog, sans-serif;
+    color: #ffffff;
+}
+
+.event-header h2 {
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: normal;  
+}
+
+.event-header p {
+    font-family: 'Sniglet', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/* Event Container */
+.event-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px; /* Increases spacing between events */
+    max-width: 1100px; /* Prevents events from spreading too far apart */
+    margin: 0 auto;
+}
+
+/* Rounded Event Box */
+.event-box {
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 500px;
+    min-width: 350px;
+    width: 45%;
+    color: white;
+    font-family: Sniglet, sans-serif;
+    text-align: left;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Alternating Background Colors */
+.event-box.tuna {
+    background-color: #A8574E;
+}
+
+.event-box.sage {
+    background-color: #768877;
+}
+
+/* Alternating Layout - Diagonal Effect */
+.event-box.left {
+    align-self: flex-start;
+    text-align: left;
+    margin-left: 5%; /* Adds diagonal spacing */
+}
+
+.event-box.right {
+    align-self: flex-end;
+    text-align: left;
+    margin-right: 5%;
+    padding-right: 50px;
+}
+
+
+
+
+/* Cherry Blossom Icon (Events) */
+.event-icon {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 75px;
+    height: auto;
+    opacity: 1;
+}
+
+
+/* Event Title */
+.event-box h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Event Details */
+.event-date, .event-location, .event-description {
+    font-size: 16px;
+    color: #fff;
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .event-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-box {
+        align-self: center !important;
+        width: 90%;
+        text-align: center;
+        margin: 0 auto; /* Centering events on small screens */
+    }
+}
+
+
+/* TODO: Resources Page Testing */
+/* General Resources Section */
+.resource-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Category Header (e.g., "Dictionaries") */
+.resource-category {
+    font-size: 28px;
+    font-family: 'Sniglet', sans-serif;
+    color: #A8574E; /* Tuna */
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block; /* Helps keep size appropriate */
+}
+
+/* Individual Resource Items */
+.resource-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Text Content */
+.resource-text {
+    flex: 1;
+    text-align: left;
+}
+
+/* Resource Title */
+.resource-text h3 {
+    font-size: 22px;
+    font-family: 'Sniglet', sans-serif;
+    color: #9B3935; /* Dark Red */
+    margin-bottom: 5px;
+}
+
+/* Resource Meta Info (e.g., "Online, Free") */
+.resource-meta {
+    font-style: italic;
+    color: #5B2D2B; /* Brown */
+    margin-bottom: 10px;
+}
+
+/* Links */
+.resource-meta a {
+    color: #76489F;
+    text-decoration: underline;
+}
+
+/* Description */
+.resource-description {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Image Container */
+.resource-image {
+    flex: 1;
+    text-align: right;
+}
+
+.resource-image img {
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Placeholder div for missing images */
+.resource-image.placeholder {
+    width: 350px; /* Ensures layout consistency */
+    height: 1px;
+    visibility: hidden; /* Keeps spacing even when no image exists */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .resource-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .resource-image,
+    .resource-image.placeholder {
+        width: 100%;
+        text-align: center;
+        height: auto;
+        visibility: visible;
+    }
+
+    .resource-text {
+        text-align: center;
+    }
+}
+
+/* Resources Header */
+.resource-header {
+    background-color: #A0A99E;
+    padding: 20px;
+    border-radius: 60px;
+    max-width: 800px;
+    margin: 0 auto;
+    margin: 60px auto 40px;
+    text-align: center;
+    font-family: Lazydog, sans-serif;
+    color: #ffffff;
+}
+
+
+.resource-header h2 {
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: normal;  
+}
+
+
+.resource-header p {
+    font-family: 'Sniglet', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+
+
+/* Back to Top Button (for resources page) */
+#back-to-top {
+    display: block;
+    margin: 40px auto; 
+    padding: 12px 24px;
+    background-color: #768877; 
+    color: white;
+    font-family: 'Lazydog', sans-serif;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#back-to-top:hover {
+    background-color: #5a6b66;
+    transform: scale(1.05);
+}
+
+
+
+
+/* Test to see if it gets rid of the purple previously visited link */
+/* Ensure the title link looks normal */
+h1 a {
+    text-decoration: none; /* Removes underline */
+    color: white; /* Sets text color */
+    font-weight: bold;
+}
+
+/* Prevent visited link from turning purple */
+h1 a:visited {
+    color: white;
+}
+
+/* Add hover effect if needed */
+h1 a:hover {
+    color: #A8574E; /* Tuna color when hovered */
+}
+
+
+/* TODO Board Members Page */
+/* Board Members Section */
+
+.board-members-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/cherry-blossom-bg.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: -1;
+    pointer-events: none; /* prevents interaction issues */
+}
+
+
+.board-members-section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+/* Board Members Grid */
+.board-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Ensures even spacing */
+    gap: 20px;
+    padding: 20px;
+    max-width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Individual Board Member Box */
+.board-member {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    border: 2px solid #5B2D2B;
+    width: 480px; 
+    height: 220px;
+    margin: auto;
+}
+
+/* Profile Image */
+.board-member img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 3px solid #768877;
+}
+
+/* Board Member Text */
+.member-info {
+    flex: 1;
+    text-align: left;
+}
+
+.member-info h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Uniform Text Spacing */
+.member-info p {
+    margin: 5px 0;
+}
+
+/* Prevent Stretching on Larger Screens */
+@media (min-width: 1400px) {
+    .board-container {
+        max-width: 1100px;
+    }
+}
+
+/* Mobile Responsive Fixes */
+@media (max-width: 768px) {
+    .board-container {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+    .board-member {
+        max-width: 90%;
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+    .board-member img {
+        margin-bottom: 10px;
+    }
+}
+
+/* Join Us Page */
+.join-header {
+    background-color: #A0A99E;
+    padding: 20px;
+    border-radius: 60px;
+    max-width: 800px;
+    margin: 0 auto;
+    margin: 60px auto 40px;
+    text-align: center;
+    font-family: Lazydog, sans-serif;
+    color: #ffffff;
+}
+
+.join-header p {
+    font-family: "Sniglet", sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+    color: white; 
+    margin-top: 10px;
+}
+
+
+.join-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+.join-step {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adjust spacing */
+}
+
+.join-step:hover {
+    transform: translateY(-3px);
+}
+
+.step-badge {
+    width: 50px;
+    height: 50px;
+    background-color: #A8574E;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-family: "Sniglet", sans-serif;
+}
+
+.step-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.step-content h3 {
+    margin: 0;
+    font-size: 1.3em;
+    font-family: "Sniglet", sans-serif;
+    font-weight: bold;
+    color: #5B2D2B;
+}
+
+.step-content p {
+    margin: 5px 0 0;
+}
+
+/* Call to Action Button */
+.cta-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.join-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #A0A99E; /* Sage Green */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+    font-family: Lazydog, sans-serif;
+}
+
+.join-button:hover {
+    background-color: #5B2D2B; /* Dark Brown */
+}
+
+/* Mobile Friendly */
+@media (max-width: 768px) {
+    .join-container {
+        max-width: 90%;
+    }
+    .join-step {
+        flex-direction: column;
+        text-align: center;
+    }
+    .step-badge {
+        margin-bottom: 10px;
+    }
+}
