@@ -781,3 +781,15 @@ h1 a:hover {
         margin-bottom: 10px;
     }
 }
+
+
+/* Test for fixing previously visited link */
+a {
+    color: #A8574E; /* Set the default link color */
+    text-decoration: none; /* Optional: removes underline */
+}
+
+a:hover {
+    color: #A8574E; 
+}
+
